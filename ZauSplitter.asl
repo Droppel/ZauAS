@@ -4,7 +4,6 @@ state("Zau")
 
 startup
 {
-	// Add setting 'mission1', enabled by default, with 'First Mission' being displayed in the GUI
 	settings.Add("prologue", true, "Split Prologue");
 	settings.Add("presunarena", true, "Split Pre Sun Arena");
 	settings.Add("postsunarena", true, "Split Post Sun Arena");
@@ -99,7 +98,7 @@ onStart
 		vars.Splits.Add(new List<string>{"", "DL02_XX_AbilityStatue"}); // Glide
 	}
 	if (settings["mountain"]) {
-		vars.Splits.Add(new List<string>{"", "DL03_000_Start"}); // Mountain
+		vars.Splits.Add(new List<string>{"DL02to03_010_DL03Side", "DL03_000_Start"}); // Mountain
 	}
 	if (settings["launch"]) {
 		vars.Splits.Add(new List<string>{"", "DL03_170_AbilityCharge"}); // Launch
